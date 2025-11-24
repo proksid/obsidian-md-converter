@@ -4,3 +4,6 @@
 def main() -> None:
     """Main entry point for the CLI."""
     print("Hello from obsidian-md-converter!")
+
+if __name__ == "__main__":
+    main()

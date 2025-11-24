@@ -7,11 +7,22 @@ authors = [
     { name = "Sergii Prokofiev" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "aiofiles>=25.1.0",
+]
 
 [project.optional-dependencies]
 dev = [
-    "ruff>=0.1.0",
+    "ruff>=0.14.0",
+    "pytest>=9.0.1",
+    "pytest-asyncio>=1.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.0",
+    "pytest>=9.0.1",
+    "pytest-asyncio>=1.3.0",
 ]
 
 [project.scripts]
