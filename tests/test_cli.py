@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pytest
 
+from src.obsidian_md_converter import __version__
 from src.obsidian_md_converter.cli import main
 
 
@@ -50,7 +51,7 @@ def test_cli_version():
         text=True,
     )
     assert result.returncode == 0
-    assert "0.1.0" in result.stdout
+    assert __version__ in result.stdout
 
 
 def test_cli_convert_with_destination(temp_vault, tmp_path):
